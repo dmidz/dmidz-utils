@@ -1,6 +1,6 @@
 {
   "name": "dmidz-utils",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -27,5 +27,4 @@
   "devDependencies": {
     "lab": "^14.3.1"
   }
-
 }
