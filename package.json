@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "lab test/unit.js -v -I check",
+    "test_noleaks": "lab test/unit.js --leaks -v",
+    "preversion": "npm test"
   },
   "repository": {
     "type": "git",
@@ -21,5 +23,9 @@
   "homepage": "https://github.com/dmidz/dmidz-utils#readme",
   "dependencies": {
     "bluebird": "^3.5.1"
+  },
+  "devDependencies": {
+    "lab": "^14.3.1"
   }
+
 }
