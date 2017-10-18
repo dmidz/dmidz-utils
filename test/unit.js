@@ -59,6 +59,14 @@ lab.experiment('dmidz-utils', function(){
 		Lab.expect( obj_to.a ).to.equal( 15 );
 		Lab.expect( obj_to.b ).to.equal( 'anotherstring' );
 		Lab.expect( obj_to.c ).to.equal( ['d','e','f'] );
+
+
+		obj_to = { a:{ aa:{ aaa:'aaa', bbb:'bbb'}} };
+		obj_from = { a:{ aa:{ bbb:'ccc'}} };
+		dutils.mixin( obj_to, obj_from, true );
+		Lab.expect( obj_to.a.aa.aaa ).to.equal( 'aaa' );
+		Lab.expect( obj_to.a.aa.bbb ).to.equal( 'ccc' );
+
 		done();
 	});
 
